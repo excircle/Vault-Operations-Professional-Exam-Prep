@@ -1,7 +1,9 @@
-resource "aws_security_group" "akalaj_opspro_sec_group" {
+resource "aws_security_group" "akalaj_opspro_sec_group_west" {
   name        = "akalaj_opspro_sec_group"
   description = "Akalaj OpsPro Sec Group"
   vpc_id      = module.primary_us_vpc.vpc_id
+
+  provider = aws.us-west
 
   ingress {
     from_port   = 8080
@@ -39,7 +41,7 @@ resource "aws_security_group" "akalaj_opspro_sec_group" {
   }
 
   tags = {
-    Name     = "Akalaj-OpsPro-Sec-Group"
+    Name     = "Akalaj-OpsPro-Sec-Group-West"
     CreateBy = "Terraform"
     Owner    = "Alexander Kalaj"
     Team     = "ISE"

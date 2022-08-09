@@ -2,6 +2,10 @@ module "primary_us_vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.14.2"
 
+  providers = {
+    aws = aws.us-west
+  }
+
   name            = "akalaj-opspro-vpc"
   cidr            = "10.64.0.0/22"
   azs             = ["us-west-2a", "us-west-2b", "us-west-2c"]
@@ -21,15 +25,15 @@ module "primary_us_vpc" {
   }
 }
 
-/*
 module "secondary_us_vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.14.2"
 
   providers = {
-    aws = aws.us-east-2
+    aws = aws.us-east
   }
 
+  name            = "akalaj-opspro-vpc"
   cidr            = "10.64.4.0/22"
   azs             = ["us-east-2a", "us-east-2b", "us-east-2c"]
   public_subnets  = ["10.64.4.0/25", "10.64.5.0/25", "10.64.6.0/25"]
@@ -47,4 +51,3 @@ module "secondary_us_vpc" {
     Team     = "ISE"
   }
 }
-*/

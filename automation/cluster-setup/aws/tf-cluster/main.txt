@@ -1,3 +1,4 @@
+/*
 module "us_west_2_cluster" {
 
   source = "./modules/accelerator"
@@ -33,3 +34,4 @@ module "us_west_2_cluster" {
     opspro-cluster-tag = "opspro-cluster-tag"
   }
 }
+*/

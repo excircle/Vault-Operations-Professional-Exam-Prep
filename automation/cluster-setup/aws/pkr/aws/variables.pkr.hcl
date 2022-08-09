@@ -14,12 +14,12 @@ variable "ssh_username" {
 variable "region" {
   type        = string
   description = "(optional) The zone to create the Packer image in"
-  default     = "us-west-2"
+  default     = "us-east-2"
 }
 
 variable "source_ami" {
   type        = string
-  default     = "ami-071e6cafc48327ca2"
+  default     = "ami-0c7c4e3c6b4941f0f"
   description = "(required) The source AMI to use - Debian (8-9-22)"
 }
 

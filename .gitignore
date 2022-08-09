@@ -4,6 +4,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*ssh-key.tf
 .DS_Store
 
 # Crash log files
