@@ -1,0 +1,6 @@
+---
+- name: Prepare Image for HashiCorp Vault
+  hosts: all
+  become: true
+  roles:
+    - ansible-role-vault
