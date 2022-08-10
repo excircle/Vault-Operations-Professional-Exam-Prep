@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "vault" {
-  ami_name      = replace(replace("ise-akalaj-opspro-${var.vault_version}", ".", ""), "+", "-")
+  ami_name      = replace(replace("ise-akalaj-opspro2-${var.vault_version}", ".", ""), "+", "-")
   ssh_username  = var.ssh_username
   instance_type = var.instance_type
   region        = var.region

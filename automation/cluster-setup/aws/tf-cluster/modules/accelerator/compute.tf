@@ -130,9 +130,10 @@ resource "aws_launch_template" "vault_launch_template" {
 }
 
 resource "aws_placement_group" "vault_placement_group" {
-  name     = format("%s-placement-group", var.application_prefix)
-  strategy = "spread"
-  tags     = var.tags
+  name         = format("%s-placement-group", var.application_prefix)
+  strategy     = "spread"
+  spread_level = var.spread_level
+  tags         = var.tags
 }
 
 resource "aws_autoscaling_group" "vault_autoscaling_group" {

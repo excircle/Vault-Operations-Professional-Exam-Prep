@@ -312,3 +312,8 @@ variable "vault_cluster_port" {
   description = "(optional) The port the Vault cluster port will listen on"
   default     = "8201"
 }
+
+variable "spread_level" {
+  type    = string
+  default = "rack"
+}
